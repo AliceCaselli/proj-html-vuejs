@@ -1,6 +1,7 @@
 <script>
 
 import HeaderApp from './components/HeaderApp.vue';
+import MainApp from './components/MainApp.vue';
 export default {
   data() {
     return {};
@@ -8,6 +9,7 @@ export default {
 
   components: {
     HeaderApp,
+    MainApp,
   }
 };
 
@@ -15,6 +17,7 @@ export default {
 
 <template>
   <HeaderApp></HeaderApp>
+  <MainApp></MainApp>
 </template>
 
 <style lang="scss" scoped></style>

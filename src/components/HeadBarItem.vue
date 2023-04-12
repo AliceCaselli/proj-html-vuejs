@@ -42,6 +42,7 @@ export default {
 .upbar {
     height: 40px;
     background-color: #bf1d2e;
+    color: white;
 
     .container-upbar {
         height: 100%;
