@@ -86,5 +86,6 @@ export default {
     gap: 10px;
     justify-content: space-between;
 
+    margin-bottom: 60px;
 }
 </style>
