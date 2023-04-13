@@ -63,6 +63,10 @@ export default {
         flex-direction: row;
         height: 100%;
 
+        img {
+            opacity: .5;
+        }
+
         span {
             align-self: center;
             font-weight: bold;
