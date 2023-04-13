@@ -37,6 +37,8 @@ export default {
 
     position: relative;
     width: calc(100% / 4);
+    flex-shrink: 0;
+
 
     .slide-img {
         height: 300px;
@@ -66,6 +68,7 @@ export default {
         display: flex;
         flex-direction: row;
         gap: 10px;
+
 
         button {
             background: white;

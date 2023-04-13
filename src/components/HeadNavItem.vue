@@ -86,6 +86,7 @@ nav {
                 flex-direction: row;
                 gap: 30px;
 
+
                 li {
                     display: flex;
                     flex-direction: row;

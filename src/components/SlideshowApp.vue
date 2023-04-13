@@ -41,6 +41,25 @@ export default {
                         'Stories',
                     ],
                 },
+                {
+                    img: 'img/music-love.webp',
+                    title: 'Music The Love Of My Life',
+                    date: 'December 26, 2022',
+                    buttons: [
+                        'Culture',
+                        'Lifestyle',
+                    ],
+                },
+                {
+                    img: 'img/anime-fashion.webp',
+                    title: 'Fashion Trend Now A Days',
+                    date: 'December 26, 2022',
+                    buttons: [
+                        'Fashion',
+                        'Lifestyle',
+                    ],
+                },
+
             ]
         };
     },
@@ -55,15 +74,48 @@ export default {
 <template>
     <div class="container-slideshow">
 
+        <i class="fa-solid fa-chevron-left"></i>
         <SlideItem v-for="slide in slides" :slide="slide"></SlideItem>
+        <i class="fa-solid fa-chevron-right"></i>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .container-slideshow {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     margin: 30px;
-    gap: 10px
+    gap: 10px;
+    overflow: hidden;
+
+    position: relative;
+
+    .fa-solid {
+        z-index: 1;
+        position: absolute;
+        background-color: #fff;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        opacity: .8;
+    }
+
+    .fa-chevron-left {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+
+    }
+
+    .fa-chevron-right {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+
+    }
 }
 </style>
