@@ -17,7 +17,23 @@ export default {
 </script>
 
 <template>
-    <UpsectionApp></UpsectionApp>
+    <div class="bg-color">
+
+        <div class="container-main">
+
+            <UpsectionApp></UpsectionApp>
+        </div>
+    </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.bg-color {
+    background-color: white;
+
+    .container-main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+}
+</style>

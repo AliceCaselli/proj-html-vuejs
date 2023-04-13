@@ -2,6 +2,7 @@
 
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
+import SlideshowApp from './components/SlideshowApp.vue';
 export default {
   data() {
     return {};
@@ -10,6 +11,7 @@ export default {
   components: {
     HeaderApp,
     MainApp,
+    SlideshowApp
   }
 };
 
@@ -17,6 +19,7 @@ export default {
 
 <template>
   <HeaderApp></HeaderApp>
+  <SlideshowApp></SlideshowApp>
   <MainApp></MainApp>
 </template>
 

@@ -40,9 +40,10 @@ export default {
 
 <style lang="scss" scoped>
 .item {
+    max-width: 100%;
     position: relative;
     height: calc(100% / 2 - 5px);
-    width: calc(100% / 4);
+    width: calc(100% / 4 - 10px);
 
 
     &:nth-child(3) {
@@ -52,6 +53,10 @@ export default {
 
     img {
         height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(.6);
+        border-radius: 5px;
     }
 
     .btn-item {
@@ -68,6 +73,7 @@ export default {
             border: transparent;
             color: #333333;
             padding: 5px;
+            border-radius: 5px;
         }
     }
 

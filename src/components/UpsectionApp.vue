@@ -35,9 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 .title-break {
-    max-width: 1200px;
-    margin: 0 auto;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,7 +46,7 @@ export default {
         gap: 20px;
 
         button {
-            padding: 5px 8px;
+            padding: 5px 10px;
             background: #333333;
             border: transparent;
             border-radius: 5px;

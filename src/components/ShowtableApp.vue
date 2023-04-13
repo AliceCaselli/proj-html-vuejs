@@ -78,14 +78,12 @@ export default {
 
 <style lang="scss" scoped>
 .table {
-    max-width: 1200px;
-    margin: 0 auto;
     height: 450px;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
-    gap: 10px;
     justify-content: space-between;
-
+    align-content: space-between;
     margin-bottom: 60px;
 }
 </style>
