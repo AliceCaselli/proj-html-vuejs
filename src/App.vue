@@ -3,6 +3,8 @@
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 import SlideshowApp from './components/SlideshowApp.vue';
+import SquareshowApp from './components/SquareshowApp.vue';
+import FooterApp from './FooterApp.vue';
 export default {
   data() {
     return {};
@@ -11,7 +13,9 @@ export default {
   components: {
     HeaderApp,
     MainApp,
-    SlideshowApp
+    SlideshowApp,
+    SquareshowApp,
+    FooterApp,
   }
 };
 
@@ -21,6 +25,8 @@ export default {
   <HeaderApp></HeaderApp>
   <SlideshowApp></SlideshowApp>
   <MainApp></MainApp>
+  <SquareshowApp></SquareshowApp>
+  <FooterApp></FooterApp>
 </template>
 
 <style lang="scss" scoped></style>

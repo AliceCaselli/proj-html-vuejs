@@ -1,6 +1,7 @@
 <script>
 
 import UpsectionApp from './UpsectionApp.vue';
+import DownsectionApp from './DownsectionApp.vue';
 
 export default {
 
@@ -11,29 +12,37 @@ export default {
 
     components: {
         UpsectionApp,
+        DownsectionApp,
     }
 };
 
 </script>
 
 <template>
-    <div class="bg-color">
+    <UpsectionApp></UpsectionApp>
 
-        <div class="container-main">
-
-            <UpsectionApp></UpsectionApp>
+    <div class="container-break">
+        <div class="banner-break">
+            <img src="img/page-banner-1.webp" alt="">
         </div>
     </div>
+
+    <DownsectionApp></DownsectionApp>
 </template>
 
 <style lang="scss" scoped>
-.bg-color {
-    background-color: white;
+.container-break {
+    max-width: 1200px;
+    margin: 30px auto;
 
-    .container-main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-top: 60px;
+
+
+    .banner-break {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
     }
 }
 </style>
