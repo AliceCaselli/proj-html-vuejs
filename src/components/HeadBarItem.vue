@@ -23,8 +23,12 @@ export default {
             </div>
 
             <div class="right-bar">
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
+
+                <div class="chevron">
+
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
 
                 <div class="icons">
                     <i class="fa-brands fa-facebook-f"></i>
@@ -58,7 +62,6 @@ export default {
         display: flex;
         flex-direction: row;
         height: 100%;
-        background-color: green;
 
         span {
             align-self: center;
@@ -69,7 +72,42 @@ export default {
 
     .right-bar {
         height: 100%;
-        background-color: blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+
+        .chevron {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .fa-brands {
+                height: 30px;
+                width: 30px;
+                background-color: #fff;
+                color: #bf1d2e;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 50%;
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: #333333;
+                }
+            }
+        }
     }
 }
 </style>

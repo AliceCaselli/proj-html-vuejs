@@ -56,6 +56,7 @@ export default {
 <style lang="scss" scoped>
 .bg-color {
     background-color: #fff;
+    margin-bottom: 10px;
 
     .container-squares {
         padding: 0 10px;

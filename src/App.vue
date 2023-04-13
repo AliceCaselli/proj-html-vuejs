@@ -4,7 +4,7 @@ import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 import SlideshowApp from './components/SlideshowApp.vue';
 import SquareshowApp from './components/SquareshowApp.vue';
-import FooterApp from './FooterApp.vue';
+import FooterApp from './components/FooterApp.vue';
 export default {
   data() {
     return {};
