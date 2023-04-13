@@ -4,7 +4,36 @@ export default {
 
     name: 'HeadNavItem',
     data() {
-        return {};
+        return {
+            links: [
+                {
+                    icon: 'fa-solid fa-house-chimney',
+                    link: 'HOME',
+                },
+                {
+                    icon: 'fa-solid fa-suitcase',
+                    link: 'LIFESTYLE',
+                    chevron: 'fa-solid fa-chevron-down',
+
+                },
+                {
+                    icon: 'fa-solid fa-book-open-reader',
+                    link: 'STORIES',
+                    chevron: 'fa-solid fa-chevron-down',
+
+                },
+                {
+                    icon: 'fa-solid fa-book',
+                    link: 'PAGES',
+                    chevron: 'fa-solid fa-chevron-down',
+
+                },
+                {
+                    icon: 'fa-solid fa-user',
+                    link: 'ABOUT US',
+                },
+            ],
+        };
     },
 };
 
@@ -21,8 +50,10 @@ export default {
 
             <div class="links">
                 <ul>
-                    <li><a href="#">
-                            <i class="fa-solid fa-house-chimney"></i>HOME</a></li>
+                    <li v-for="link in links">
+                        <i :class="link.icon"></i><a href="#">{{ link.link }}</a>
+                        <i :class="link.chevron"></i>
+                    </li>
                 </ul>
             </div>
 
@@ -46,6 +77,30 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+
+        .links {
+            ul {
+
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    align-items: center;
+
+
+                    a {
+                        color: #333333;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
     }
 
 
