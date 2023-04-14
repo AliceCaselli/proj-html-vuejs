@@ -57,6 +57,10 @@ export default {
         object-fit: cover;
         filter: brightness(.6);
         border-radius: 5px;
+
+        &:hover {
+            filter: brightness(1);
+        }
     }
 
     .btn-item {
@@ -74,6 +78,10 @@ export default {
             color: #333333;
             padding: 5px;
             border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 

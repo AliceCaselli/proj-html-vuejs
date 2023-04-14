@@ -60,13 +60,46 @@ export default {
                     ],
                 },
 
-            ]
+            ],
+
+            activeIndex: 0,
+
+            slideNumber: 3,
+
         };
     },
 
     components: {
         SlideItem,
+    },
+
+    methods: {
+
+        slideShowNext() {
+
+            this.activeIndex++;
+
+            if (this.activeIndex + this.slideNumber == this.slides.length) {
+
+                this.activeIndex = 0;
+            }
+
+        },
+
+        slideShowPrev() {
+
+            this.activeIndex--;
+
+            if (this.activeIndex < 0) {
+
+                this.activeIndex = this.slides.length - 1 - this.slideNumber;
+            }
+
+
+        }
     }
+
+
 };
 
 </script>
@@ -74,9 +107,10 @@ export default {
 <template>
     <div class="container-slideshow">
 
-        <i class="fa-solid fa-chevron-left"></i>
-        <SlideItem v-for="slide in slides" :slide="slide"></SlideItem>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="fa-solid fa-chevron-left" @click="slideShowPrev()"></i>
+        <SlideItem v-for="(slide, index) in slides" :slide="slide" :index="index" :activeIndex="activeIndex"
+            :slideNumber="slideNumber"></SlideItem>
+        <i class="fa-solid fa-chevron-right" @click="slideShowNext()"></i>
     </div>
 </template>
 
@@ -86,7 +120,6 @@ export default {
     flex-flow: row nowrap;
     margin: 30px;
     gap: 10px;
-    overflow: hidden;
 
     position: relative;
 

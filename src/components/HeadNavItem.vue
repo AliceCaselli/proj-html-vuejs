@@ -33,8 +33,18 @@ export default {
                     link: 'ABOUT US',
                 },
             ],
+
+            activeIndex: -1,
         };
     },
+
+    methods: {
+
+        classActive(clickIndex) {
+
+            this.activeIndex = clickIndex;
+        }
+    }
 };
 
 </script>
@@ -50,8 +60,9 @@ export default {
 
             <div class="links">
                 <ul>
-                    <li v-for="link in links">
-                        <i :class="link.icon"></i><a href="#">{{ link.link }}</a>
+                    <li v-for="(link, index) in links" @click="classActive(index)">
+                        <i :class="link.icon"></i><a href="#" :class="activeIndex == index ? 'active' : ''">{{ link.link
+                        }}</a>
                         <i :class="link.chevron"></i>
                     </li>
                 </ul>
@@ -94,9 +105,19 @@ nav {
                     align-items: center;
 
 
+
                     a {
                         color: #333333;
                         text-decoration: none;
+                        font-weight: bold;
+
+                        &.active {
+                            color: #bf1d2e;
+                        }
+
+                        &:hover {
+                            color: #bf1d2e;
+                        }
                     }
                 }
             }

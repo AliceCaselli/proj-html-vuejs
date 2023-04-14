@@ -11,13 +11,16 @@ export default {
 
     props: {
         slide: Object,
+        index: Number,
+        activeIndex: Number,
+        slideNumber: Number,
     }
 };
 
 </script>
 
 <template>
-    <div class="slide-card">
+    <div v-if="(index >= activeIndex) && (index <= activeIndex + slideNumber)" class="slide-card">
         <div class="slide-img">
             <img :src="slide.img" alt="">
         </div>
@@ -37,7 +40,6 @@ export default {
 
     position: relative;
     width: calc(100% / 4);
-    flex-shrink: 0;
 
 
     .slide-img {

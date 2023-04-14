@@ -1,11 +1,62 @@
 <script>
 
+import ThumbItem from './ThumbItem.vue';
+
 export default {
 
     name: 'Slidethumb',
     data() {
-        return {};
+        return {
+
+            thumbs: [
+
+                {
+                    image: 'img/success-story.webp',
+                    button: 'Stories',
+                    user: 'demo',
+                    date: 'December 26, 2022',
+                    title: 'Traveling Alone Is Awesome',
+                },
+                {
+                    image: 'img/travel-alone.webp',
+                    button: 'Stories',
+                    user: 'demo',
+                    date: 'December 26, 2022',
+                    title: 'Traveling Alone Is Awesome',
+                },
+                {
+                    image: 'img/best-places.webp',
+                    button: 'Lifestyle',
+                    user: 'demo',
+                    date: 'December 25, 2022',
+                    title: 'Places For A Road Trip',
+                },
+                {
+                    image: 'img/music-love.webp',
+                    button: 'Culture',
+                    user: 'demo',
+                    date: 'December 25, 2022',
+                    title: 'Music The Love Of My Life',
+                },
+            ],
+
+            activeIndex: 0,
+        };
     },
+
+    components: {
+        ThumbItem,
+    },
+
+    methods: {
+
+        activeImg(clickIndex) {
+
+            this.activeIndex = clickIndex;
+        }
+
+    }
+
 };
 
 </script>
@@ -14,9 +65,12 @@ export default {
     <div class="container-slide">
 
         <div class="slide-active">
-            <img src="img/success-story.webp" alt="">
+            <img :src="this.thumbs[activeIndex].image" alt="">
         </div>
-        <div class="thumb"></div>
+        <div class="thumbs">
+            <ThumbItem v-for="(thumb, index) in thumbs" :thumb="thumb" :index="index" @active="activeImg(index)">
+            </ThumbItem>
+        </div>
     </div>
 </template>
 
@@ -34,13 +88,14 @@ export default {
 
         img {
             height: 100%;
+            filter: brightness(.6);
         }
     }
 
-    .thumb {
+    .thumbs {
         height: 450px;
-        width: 500px;
-        background-color: blue;
+        width: calc(100% - 700px);
+        overflow-y: scroll;
     }
 }
 </style>
